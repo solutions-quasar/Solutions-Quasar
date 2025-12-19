@@ -16,9 +16,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.top = '80px';
                 navLinks.style.left = '0';
                 navLinks.style.width = '100%';
+                navLinks.style.height = 'calc(100vh - 80px)'; // Full screen height
                 navLinks.style.background = 'white';
-                navLinks.style.padding = '20px';
+                navLinks.style.padding = '40px 20px'; // More top padding
                 navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
+                navLinks.style.overflowY = 'auto'; // Enable scrolling
             }
         });
     }
