@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/quasar-logo.png">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
@@ -20,11 +21,12 @@
     <nav class="navbar">
         <div class="container nav-container">
             <a href="index_fr.html" class="logo">
+                <img src="images/quasar-logo.png" alt="Solutions Quasar">
                 <span class="logo-text">Solutions Quasar</span>
             </a>
             <div class="nav-links">
                 <a href="#services">Ce qu'on fait</a>
-                <a href="#clients">Nos Amis</a>
+                <a href="pricing-fr.html">Tarifs</a>
                 <a href="#about">Nous</a>
                 <a href="index.html" style="font-weight: 700;">EN</a>
                 <div class="nav-cta">
@@ -42,7 +44,7 @@
     <section class="hero">
         <div class="container hero-content">
             <div class="hero-text">
-                <div class="badge-local"><i data-lucide="map-pin"></i> 100% Nouveau-Brunswick</div>
+                <div class="badge-local"><i data-lucide="map-pin"></i> 100% Canadien</div>
                 <h1>On parle ordi <br>pour que vous <span class="highlight">n'ayez pas à le faire.</span></h1>
                 <p>On est juste des gens d'ici qui créent de super sites web. Pas de jargon, pas de niaisage, juste du
                     bon code et du bon café.</p>
@@ -52,10 +54,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <!-- Using a friendly abstract shape or illustration instead of hologram -->
-                <div class="blob-shape">
-                    <i data-lucide="smile" size="120"></i>
-                </div>
+                <!-- Using a friendly abstract shape or illustration -->
+                <img src="images/hero-illustration.jpg" alt="Robot Solutions Quasar" class="hero-img">
             </div>
         </div>
     </section>
@@ -68,23 +68,33 @@
                 <p>À part boire trop de café.</p>
             </div>
             <div class="services-grid">
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='website-design-fr.html'"
+                    style="cursor: pointer;">
                     <div class="icon-box"><i data-lucide="monitor"></i></div>
-                    <h3>Des Sites qui Marchent</h3>
+                    <h3>On crée des sites web</h3>
                     <p>On bâtit des sites qui paraissent bien sur votre téléphone, votre ordi, et votre frigo
                         intelligent (probablement).</p>
+                    <a href="website-design-fr.html" class="btn-text"
+                        style="color: var(--primary); font-weight: 600; margin-top: 16px; display: inline-block;">En
+                        savoir plus &rarr;</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='web-apps-fr.html'" style="cursor: pointer;">
                     <div class="icon-box"><i data-lucide="database"></i></div>
-                    <h3>Le Compliqué rendu Simple</h3>
+                    <h3>On bâtit des Apps</h3>
                     <p>Besoin d'une app sur mesure? On peut la faire. On aime les trucs de nerds pour que vous puissiez
                         focuser sur votre business.</p>
+                    <a href="web-apps-fr.html" class="btn-text"
+                        style="color: var(--primary); font-weight: 600; margin-top: 16px; display: inline-block;">En
+                        savoir plus &rarr;</a>
                 </div>
-                <div class="service-card">
+                <div class="service-card" onclick="window.location.href='pricing-fr.html'" style="cursor: pointer;">
                     <div class="icon-box"><i data-lucide="zap"></i></div>
                     <h3>Intégration IA</h3>
-                    <p>On peut brancher votre business sur les robots intelligents. C'est le futur, aussi bien
+                    <p>On peut connecter votre business avec les robots intelligents. C'est le futur, aussi bien
                         embarquer.</p>
+                    <a href="pricing-fr.html" class="btn-text"
+                        style="color: var(--primary); font-weight: 600; margin-top: 16px; display: inline-block;">En
+                        savoir plus &rarr;</a>
                 </div>
             </div>
         </div>
@@ -101,6 +111,36 @@
                 </div>
                 <div class="speed-icon">
                     <i data-lucide="rocket" size="64"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>L'<span class="highlight">Équipe</span></h2>
+                <p>De vrais humains qui bâtissent de vrais logiciels.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-avatar">BS</div>
+                    <h3>Benjamin Sultan</h3>
+                    <div class="team-role">Fondateur Développeur</div>
+                    <div class="team-location"><i data-lucide="map-pin" size="14"></i> Nouveau-Brunswick</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">TR</div>
+                    <h3>Tim Rieg</h3>
+                    <div class="team-role">Développeur</div>
+                    <div class="team-location"><i data-lucide="map-pin" size="14"></i> Québec</div>
+                </div>
+                <div class="team-card">
+                    <div class="team-avatar">MR</div>
+                    <h3>Mathieu Rieg</h3>
+                    <div class="team-role">Fondateur Relation Client</div>
+                    <div class="team-location"><i data-lucide="map-pin" size="14"></i> Québec</div>
                 </div>
             </div>
         </div>
@@ -154,7 +194,7 @@
                     </div>
                     <div class="contact-item">
                         <i data-lucide="map-pin"></i>
-                        <span>Fièrement basé au Nouveau-Brunswick</span>
+                        <span>Nos bureaux sont au Nouveau-Brunswick et au Québec</span>
                     </div>
                 </div>
             </div>
@@ -196,6 +236,12 @@
             <p>&copy; 2024 Solutions Quasar Inc.</p>
         </div>
     </footer>
+
+    <!-- Mobile Action Bar -->
+    <div class="mobile-action-bar">
+        <a href="tel:4184100856" class="action-btn call"><i data-lucide="phone"></i> Appeler</a>
+        <a href="#contact" class="action-btn message"><i data-lucide="mail"></i> Message</a>
+    </div>
 
     <script src="script.js"></script>
     <script>
