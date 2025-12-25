@@ -35,21 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle
     if (mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => {
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '80px';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.height = 'calc(100vh - 80px)';
-                navLinks.style.background = 'var(--bg-page)';
-                navLinks.style.padding = '40px 20px';
-                navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                navLinks.style.overflowY = 'auto';
-            }
+            document.body.classList.toggle('mobile-menu-open');
+            mobileBtn.classList.toggle('active');
         });
     }
 
@@ -63,7 +50,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 if (window.innerWidth <= 960 && navLinks) {
-                    navLinks.style.display = 'none';
+                    document.body.classList.remove('mobile-menu-open');
+                    mobileBtn?.classList.remove('active');
                 }
                 targetElement.scrollIntoView({
                     behavior: 'smooth'
@@ -77,4 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
     yearElements.forEach(el => {
         el.textContent = year;
     });
+
+    // Smart Header
+    const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+    const scrollThreshold = 100;
+
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth > 960) {
+            navbar.classList.remove('navbar-hidden');
+            return;
+        }
+
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Don't do anything if near top
+        if (scrollTop < scrollThreshold) {
+            navbar.classList.remove('navbar-hidden');
+            return;
+        }
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down
+            navbar.classList.add('navbar-hidden');
+        } else {
+            // Scrolling up
+            navbar.classList.remove('navbar-hidden');
+        }
+
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
 });
