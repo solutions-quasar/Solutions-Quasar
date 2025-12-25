@@ -29,6 +29,9 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="index.html#about">Us</a>
                 <a href="website-design-fr.html" style="font-weight: 700;">FR</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="moon"></i>
+                </button>
                 <div class="nav-cta">
                     <a href="tel:4184100856" class="btn btn-call"><i data-lucide="phone"></i> 418-410-0856</a>
                     <a href="index.html#contact" class="btn btn-primary">Get a Quote</a>
@@ -113,32 +116,38 @@
             </div>
 
             <div class="comparison-container">
+                <div class="comparison-vs-badge">VS</div>
+
                 <div class="comparison-card bad">
+                    <div class="card-visual">
+                        <img src="images/bad-website.png" alt="Concept of a broken, chaotic website">
+                    </div>
                     <div class="card-header">
-                        <i data-lucide="frown" size="48"></i>
                         <h3>The "Cousin's Friend" Special</h3>
                     </div>
                     <ul class="comparison-list">
-                        <li><i data-lucide="x"></i> <span>Slow loading times (users leave)</span></li>
-                        <li><i data-lucide="x"></i> <span>Broken on mobile devices</span></li>
-                        <li><i data-lucide="x"></i> <span>Zero SEO strategy</span></li>
-                        <li><i data-lucide="x"></i> <span>Hard to update or fix</span></li>
-                        <li><i data-lucide="x"></i> <span>Security vulnerabilities</span></li>
+                        <li><i data-lucide="x-circle"></i> <span>Slow loading times (users leave)</span></li>
+                        <li><i data-lucide="x-circle"></i> <span>Broken on mobile devices</span></li>
+                        <li><i data-lucide="x-circle"></i> <span>Zero SEO strategy</span></li>
+                        <li><i data-lucide="x-circle"></i> <span>Hard to update or fix</span></li>
+                        <li><i data-lucide="x-circle"></i> <span>Security vulnerabilities</span></li>
                     </ul>
                 </div>
 
                 <div class="comparison-card good">
+                    <div class="card-visual">
+                        <img src="images/good-website.png" alt="Concept of a structured, high-performance website">
+                    </div>
                     <div class="card-header">
                         <div class="badge-best">Recommended</div>
-                        <i data-lucide="smile" size="48"></i>
                         <h3>The Quasar Standard</h3>
                     </div>
                     <ul class="comparison-list">
-                        <li><i data-lucide="check"></i> <span>Blazing fast performance</span></li>
-                        <li><i data-lucide="check"></i> <span>Responsive on ANY device</span></li>
-                        <li><i data-lucide="check"></i> <span>Built-in SEO structure</span></li>
-                        <li><i data-lucide="check"></i> <span>Clean, maintainable code</span></li>
-                        <li><i data-lucide="check"></i> <span>Secure and robust</span></li>
+                        <li><i data-lucide="check-circle-2"></i> <span>Blazing fast performance</span></li>
+                        <li><i data-lucide="check-circle-2"></i> <span>Responsive on ANY device</span></li>
+                        <li><i data-lucide="check-circle-2"></i> <span>Built-in SEO structure</span></li>
+                        <li><i data-lucide="check-circle-2"></i> <span>Clean, maintainable code</span></li>
+                        <li><i data-lucide="check-circle-2"></i> <span>Secure and robust</span></li>
                     </ul>
                 </div>
             </div>
@@ -156,15 +165,27 @@
                         Design is important, but information architecture is what converts visitors into leads.</p>
                     <p>We map out the user journey, ensuring that from the moment they land on your page, they know
                         exactly who you are, what you do, and how to pay you.</p>
-                    <a href="index.html#contact" class="btn btn-primary mt-4">Build a Converting Site</a>
+                    <a href="index.html#contact" class="btn btn-primary" style="margin-top: 48px;">Build a Converting
+                        Site</a>
                 </div>
                 <div class="split-image">
-                    <div class="architecture-visual">
-                        <div class="arch-block">Structure</div>
-                        <div class="arch-line"></div>
-                        <div class="arch-row">
-                            <div class="arch-block">Content</div>
-                            <div class="arch-block highlight-bg">Conversion</div>
+                    <div class="process-flow">
+                        <div class="process-step">
+                            <div class="step-icon"><i data-lucide="layout-template"></i></div>
+                            <div class="step-label">Structure</div>
+                            <div class="step-desc">Solid Foundation</div>
+                        </div>
+                        <div class="process-line"><i data-lucide="arrow-down"></i></div>
+                        <div class="process-step">
+                            <div class="step-icon"><i data-lucide="file-text"></i></div>
+                            <div class="step-label">Content</div>
+                            <div class="step-desc">Clear Message</div>
+                        </div>
+                        <div class="process-line"><i data-lucide="arrow-down"></i></div>
+                        <div class="process-step highlight">
+                            <div class="step-icon"><i data-lucide="mouse-pointer-click"></i></div>
+                            <div class="step-label">Conversion</div>
+                            <div class="step-desc">Action!</div>
                         </div>
                     </div>
                 </div>
@@ -174,21 +195,61 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
                 <span class="logo-text">Solutions Quasar</span>
-                <p>Local code. Global standards.</p>
+                <p>Local code. Global standards. We build high-performance digital solutions for businesses that want to
+                    grow.</p>
+                <div class="footer-social-links">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#">Privacy (We keep secrets)</a>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="website-design.html" class="footer-link">Website Design</a></li>
+                    <li><a href="web-apps.html" class="footer-link">Web Applications</a></li>
+                    <li><a href="#" class="footer-link">SEO Optimization</a></li>
+                    <li><a href="#" class="footer-link">Maintenance</a></li>
+                </ul>
             </div>
-            <div class="social-links">
-                <a href="#"><i data-lucide="facebook"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index.html#about" class="footer-link">About Us</a></li>
+                    <li><a href="index.html#process" class="footer-link">Our Process</a></li>
+                    <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>1611 Route 950, Trois-Ruisseaux, NB</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>131 Rue Montambault, Deschambault, QC</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>418-410-0856</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="mail"></i>
+                    <span>info@solutionsquasar.com</span>
+                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2024 Solutions Quasar Inc.</p>
+            <p>&copy; <span class="current-year">2024</span> Solutions Quasar Inc. All rights reserved.</p>
         </div>
     </footer>
 

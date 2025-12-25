@@ -29,6 +29,9 @@
                 <a href="pricing.html">Pricing</a>
                 <a href="#about">Us</a>
                 <a href="index_fr.html" style="font-weight: 700;">FR</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="moon"></i>
+                </button>
                 <div class="nav-cta">
                     <a href="tel:4184100856" class="btn btn-call"><i data-lucide="phone"></i> 418-410-0856</a>
                     <a href="#contact" class="btn btn-primary">Get a Quote</a>
@@ -65,7 +68,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>What we actually <span class="highlight">do</span></h2>
-                <p>Besides drinking too much coffee.</p>
+                <p>We build websites that work.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card" onclick="window.location.href='website-design.html'" style="cursor: pointer;">
@@ -191,7 +194,10 @@
                     </div>
                     <div class="contact-item">
                         <i data-lucide="map-pin"></i>
-                        <span>Proudly based in New-Brunswick</span>
+                        <div style="display: flex; flex-direction: column; gap: 4px;">
+                            <span>1611 Route 950, Trois-Ruisseaux, NB</span>
+                            <span>131 Rue Montambault, Deschambault, QC</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -216,21 +222,61 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
                 <span class="logo-text">Solutions Quasar</span>
-                <p>Local code. Global standards.</p>
+                <p>Local code. Global standards. We build high-performance digital solutions for businesses that want to
+                    grow.</p>
+                <div class="footer-social-links">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#">Privacy (We keep secrets)</a>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="website-design.html" class="footer-link">Website Design</a></li>
+                    <li><a href="web-apps.html" class="footer-link">Web Applications</a></li>
+                    <li><a href="#" class="footer-link">SEO Optimization</a></li>
+                    <li><a href="#" class="footer-link">Maintenance</a></li>
+                </ul>
             </div>
-            <div class="social-links">
-                <a href="#"><i data-lucide="facebook"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
+
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul class="footer-links-list">
+                    <li><a href="#about" class="footer-link">About Us</a></li>
+                    <li><a href="#process" class="footer-link">Our Process</a></li>
+                    <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+                    <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>1611 Route 950, Trois-Ruisseaux, NB</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>131 Rue Montambault, Deschambault, QC</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>418-410-0856</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="mail"></i>
+                    <span>info@solutionsquasar.com</span>
+                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2024 Solutions Quasar Inc.</p>
+            <p>&copy; <span class="current-year">2024</span> Solutions Quasar Inc. All rights reserved.</p>
         </div>
     </footer>
 

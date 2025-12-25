@@ -29,6 +29,9 @@
                 <a href="pricing-fr.html">Tarifs</a>
                 <a href="index_fr.html#about">Nous</a>
                 <a href="web-apps.html" style="font-weight: 700;">EN</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+                    <i data-lucide="moon"></i>
+                </button>
                 <div class="nav-cta">
                     <a href="tel:4184100856" class="btn btn-call"><i data-lucide="phone"></i> 418-410-0856</a>
                     <a href="index_fr.html#contact" class="btn btn-primary">Soumission</a>
@@ -108,13 +111,24 @@
             <div class="split-content">
                 <div class="split-image">
                     <!-- Abstract visual representing order from chaos -->
-                    <div class="architecture-visual">
-                        <div class="arch-row">
-                            <div class="arch-block" style="opacity: 0.5">Chiffrier 1</div>
-                            <div class="arch-block" style="opacity: 0.5">App de Notes</div>
+                    <!-- Chaos to Order Visual -->
+                    <div class="chaos-visual">
+                        <div class="chaos-group">
+                            <div class="chaos-atom atom-1"><i data-lucide="file-spreadsheet"></i></div>
+                            <div class="chaos-atom atom-2"><i data-lucide="sticky-note"></i></div>
+                            <div class="chaos-atom atom-3"><i data-lucide="mail"></i></div>
+                            <div class="chaos-atom atom-4"><i data-lucide="calendar"></i></div>
+                            <div class="chaos-label">Chaos</div>
                         </div>
-                        <div class="arch-line"></div>
-                        <div class="arch-block highlight-bg">Tableau de Bord Unifié</div>
+                        <div class="chaos-arrow">
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                        <div class="order-group">
+                            <div class="order-card">
+                                <div class="order-icon"><i data-lucide="layout-dashboard"></i></div>
+                                <div class="order-label">Tableau de Bord Unifié</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="split-text">
@@ -137,21 +151,61 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-content">
-            <div class="footer-brand">
+        <div class="container footer-grid">
+            <div class="footer-col footer-brand">
                 <span class="logo-text">Solutions Quasar</span>
-                <p>Code local. Standards mondiaux.</p>
+                <p>Code local. Standards mondiaux. Nous bâtissons des solutions numériques haute performance pour les
+                    entreprises qui veulent grandir.</p>
+                <div class="footer-social-links">
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                    <a href="#"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="instagram"></i></a>
+                </div>
             </div>
-            <div class="footer-links">
-                <a href="#">Confidentialité (On garde les secrets)</a>
+
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul class="footer-links-list">
+                    <li><a href="website-design-fr.html" class="footer-link">Création de Site Web</a></li>
+                    <li><a href="web-apps-fr.html" class="footer-link">Applications Web</a></li>
+                    <li><a href="#" class="footer-link">Optimisation SEO</a></li>
+                    <li><a href="#" class="footer-link">Maintenance</a></li>
+                </ul>
             </div>
-            <div class="social-links">
-                <a href="#"><i data-lucide="facebook"></i></a>
-                <a href="#"><i data-lucide="linkedin"></i></a>
+
+            <div class="footer-col">
+                <h4>Compagnie</h4>
+                <ul class="footer-links-list">
+                    <li><a href="index_fr.html#about" class="footer-link">À propos</a></li>
+                    <li><a href="index_fr.html#process" class="footer-link">Notre Processus</a></li>
+                    <li><a href="pricing-fr.html" class="footer-link">Tarifs</a></li>
+                    <li><a href="#" class="footer-link">Confidentialité</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-contact-col">
+                <h4>Contact</h4>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>1611 Route 950, Trois-Ruisseaux, NB</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="map-pin"></i>
+                    <span>131 Rue Montambault, Deschambault, QC</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="phone"></i>
+                    <span>418-410-0856</span>
+                </div>
+                <div class="footer-contact-item">
+                    <i data-lucide="mail"></i>
+                    <span>info@solutionsquasar.com</span>
+                </div>
             </div>
         </div>
+
         <div class="footer-bottom">
-            <p>&copy; 2024 Solutions Quasar Inc.</p>
+            <p>&copy; <span class="current-year">2024</span> Solutions Quasar Inc. Tous droits réservés.</p>
         </div>
     </footer>
 

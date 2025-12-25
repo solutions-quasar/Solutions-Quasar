@@ -3,24 +3,52 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
+    // Theme Toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    function updateThemeIcon(isDark) {
+        const icon = themeToggle?.querySelector('i');
+        if (icon) {
+            icon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+            if (window.lucide) {
+                window.lucide.createIcons();
+            }
+        }
+    }
+
+    // Check for saved theme
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        body.classList.add('dark-theme');
+        updateThemeIcon(true);
+    }
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = body.classList.toggle('dark-theme');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            updateThemeIcon(isDark);
+        });
+    }
+
+    // Mobile Menu Toggle
     if (mobileBtn && navLinks) {
         mobileBtn.addEventListener('click', () => {
-            // Toggle display
             if (navLinks.style.display === 'flex') {
                 navLinks.style.display = 'none';
             } else {
                 navLinks.style.display = 'flex';
-                // Add mobile specific styles inline for simplicity or toggle a class
                 navLinks.style.flexDirection = 'column';
                 navLinks.style.position = 'absolute';
                 navLinks.style.top = '80px';
                 navLinks.style.left = '0';
                 navLinks.style.width = '100%';
-                navLinks.style.height = 'calc(100vh - 80px)'; // Full screen height
-                navLinks.style.background = 'white';
-                navLinks.style.padding = '40px 20px'; // More top padding
+                navLinks.style.height = 'calc(100vh - 80px)';
+                navLinks.style.background = 'var(--bg-page)';
+                navLinks.style.padding = '40px 20px';
                 navLinks.style.boxShadow = '0 4px 6px rgba(0,0,0,0.1)';
-                navLinks.style.overflowY = 'auto'; // Enable scrolling
+                navLinks.style.overflowY = 'auto';
             }
         });
     }
@@ -34,7 +62,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
-                // Close mobile menu if open
                 if (window.innerWidth <= 960 && navLinks) {
                     navLinks.style.display = 'none';
                 }
@@ -43,5 +70,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
         });
+    });
+    // Update Year
+    const yearElements = document.querySelectorAll('.current-year');
+    const year = new Date().getFullYear();
+    yearElements.forEach(el => {
+        el.textContent = year;
     });
 });
